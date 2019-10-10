@@ -2023,6 +2023,3 @@ namespace light {
         return pixels;
     }
 }
-
-let strip = new light.NeoPixelStrip()
-light.theaterChaseAnimation.createRenderer(strip)
