@@ -1,7 +1,8 @@
 {
     "name": "microbitAnimate",
     "dependencies": {
-        "device": "*"
+        "core": "*"
+        "neopixel": "github:Microsoft/pxt-neopixel"
     },
     "description": "",
     "files": [
