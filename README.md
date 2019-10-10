@@ -24,7 +24,6 @@ To edit this repository in MakeCode,
 
 ## Supported targets
 
-* for PXT/arcade
-* for PXT/arcade
+* for PXT/microbit
 (The metadata above is needed for package search.)
 
