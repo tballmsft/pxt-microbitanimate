@@ -314,10 +314,10 @@ namespace light {
         _transitionPlayer: BrightnessTransitionPlayer;
         _microbitStrip: neopixel.Strip;
 
-        constructor() {
+        constructor(pin: DigitalPin, length: number, mode: NeoMode) {
             this._buffered = false;
             this._mode = NeoMode.RGB;
-            this._microbitStrip = neopixel.create(DigitalPin.P0, 30, NeoPixelMode.RGB)
+            this._microbitStrip = neopixel.create(pin, length, NeoPixelMode.RGB)
             this._length = 30;
             this._brightness = 16;
             this._start = 0;
@@ -1390,19 +1390,19 @@ namespace light {
     //% weight=100 blockSetVariable=strip
     //% advanced=true blockHidden=1
     export function createNeoPixelStrip(
-        pin: DigitalInOutPin,
-        numleds: number = 10,
+        pin: DigitalPin,
+        numleds: number = 30,
         mode?: NeoMode
     ): NeoPixelStrip {
         if (!mode)
             mode = NeoMode.RGB;
 
-        const strip = new NeoPixelStrip();
-        strip._mode = mode;
-        strip._length = Math.max(0, numleds | 0);
-        strip._dataPin = pin;
-        if (strip._dataPin) // board with no-board LEDs won't have a default pin
-            strip._dataPin.digitalWrite(false);
+        const strip = new NeoPixelStrip(pin, numleds, mode);
+        // strip._mode = mode;
+        //strip._length = Math.max(0, numleds | 0);
+        //strip._dataPin = pin;
+        //if (strip._dataPin) // board with no-board LEDs won't have a default pin
+        //    strip._dataPin.digitalWrite(false);
         return strip;
     }
 
