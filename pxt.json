@@ -8,6 +8,7 @@
     "files": [
         "library.ts",
         "color.ts",
+        "control.ts",
         "README.md"
     ],
     "preferredEditor": "tsprj",
