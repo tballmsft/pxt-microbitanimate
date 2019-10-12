@@ -1451,7 +1451,7 @@ namespace light {
      * @param color color to fade
      * @param brightness the amount of brightness to apply to the color, eg: 128
      */
-    //% blockId="Xneopixel_fade" block="fade %color=neopixel_colors|by %brightness"
+    //% blockId="Xneopixel_fade" block="fade %color=Xneopixel_colors|by %brightness"
     //% brightness.min=0 brightness.max=255
     //% help="light/fade"
     //% group="Color" weight=18 blockGap=8
