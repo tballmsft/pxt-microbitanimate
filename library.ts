@@ -1501,6 +1501,7 @@ namespace light {
         }
     }
 
+    //% fixedInstance block="rainbow" whenUsed jres blockIdentity="light._animationPicker"
     export const rainbowAnimation: NeoPixelAnimation = new RainbowCycleAnimation(50);
 
     export class RunningLightsAnimation extends NeoPixelAnimation {
@@ -1540,6 +1541,7 @@ namespace light {
         }
     }
 
+    //% fixedInstance block="running lights" jres blockIdentity="light._animationPicker"
     export const runningLightsAnimation: NeoPixelAnimation = new RunningLightsAnimation(0xff, 0, 0, 50);
 
     class CometAnimation extends NeoPixelAnimation {
@@ -1580,6 +1582,7 @@ namespace light {
         }
     }
 
+    //% fixedInstance block="comet" jres blockIdentity="light._animationPicker"
     export const cometAnimation: NeoPixelAnimation = new CometAnimation(0xff, 0, 0xff, 50);
 
     export class SparkleAnimation extends NeoPixelAnimation {
@@ -1655,6 +1658,7 @@ namespace light {
         }
     }
 
+    //% fixedInstance block="color wipe" jres blockIdentity="light._animationPicker"
     export const colorWipeAnimation: NeoPixelAnimation = new ColorWipeAnimation(0x0000ff, 50);
 
     class TheatreChaseAnimation extends NeoPixelAnimation {
@@ -1700,6 +1704,7 @@ namespace light {
         }
     }
 
+    //% fixedInstance block="theater chase" jres blockIdentity="light._animationPicker"
     export const theaterChaseAnimation: NeoPixelAnimation = new TheatreChaseAnimation(0xff, 0, 0, 50);
 
     /**
