@@ -318,7 +318,7 @@ namespace light {
             this._buffered = false;
             this._mode = NeoMode.RGB;
             this._microbitStrip = neopixel.create(pin, length, NeoPixelMode.RGB)
-            this._length = 30;
+            this._length = length;
             this._brightness = 16;
             this._start = 0;
             this._dataPin = undefined;
@@ -562,7 +562,7 @@ namespace light {
         show(): void {
 
             if (this._parent) this._parent.show();
-            else if (this._dataPin) {
+            else if (this._microbitStrip) {
                 const b = this.buf;
 
                 // fast path: no processing
@@ -1401,7 +1401,7 @@ namespace light {
             mode = NeoMode.RGB;
 
         const strip = new NeoPixelStrip(pin, numleds, mode);
-        // strip._mode = mode;
+        //strip._mode = mode;
         //strip._length = Math.max(0, numleds | 0);
         //strip._dataPin = pin;
         //if (strip._dataPin) // board with no-board LEDs won't have a default pin
