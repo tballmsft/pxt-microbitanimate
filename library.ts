@@ -703,6 +703,7 @@ namespace light {
          * @param start offset in the NeoPixel strip to start the range
          * @param length number of pixels in the range, eg: 4
          */
+        /*
         //% blockId="Xlight_range" block="%strip|range from %start|with %length|pixels"
         //% help="light/neopixelstrip/range"
         //% weight=99 blockGap=30
@@ -721,6 +722,7 @@ namespace light {
             strip._length = Math.clamp(0, this._length - (strip._start - this._start), length);
             return strip;
         }
+        */
 
         /**
          * Shift LEDs forward and clear with zeros.
