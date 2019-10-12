@@ -121,7 +121,7 @@ namespace color {
  * @param green value of the green channel between 0 and 255. eg: 255
  * @param blue value of the blue channel between 0 and 255. eg: 255
  */
-    //% blockId="colorsrgb" block="red %red|green %green|blue %blue"
+    //% blockId="Xcolorsrgb" block="red %red|green %green|blue %blue"
     //% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
     //% help="colors/rgb"
     //% weight=19 blockGap=8
@@ -137,7 +137,7 @@ namespace color {
     /**
     * Get the RGB value of a known color
     */
-    //% blockId=colorscolors block="%color"
+    //% blockId=Xcolorscolors block="%color"
     //% help="colors/well-known"
     //% shim=TD_ID
     //% weight=20 blockGap=8
@@ -153,7 +153,7 @@ namespace color {
      * @param val value of the value channel between 0 and 255. eg: 255
      */
 
-    //% blockId="colorshsv" block="hue %hue|sat %sat|val %val"
+    //% blockId="Xcolorshsv" block="hue % hue | sat % sat | val % val"
     //% hue.min=0 hue.max=255 sat.min=0 sat.max=255 val.min=0 val.max=255
     //% help="colors/hsv"
     //% weight=17
@@ -209,7 +209,7 @@ namespace color {
      * @param color color to fade
      * @param brightness the amount of brightness to apply to the color, eg: 128
      */
-    //% blockId="colorsfade" block="fade %color=Xneopixel_colors|by %brightness"
+    //% blockId="Xcolorsfade" block="fade %color=Xneopixel_colors|by %brightness"
     //% brightness.min=0 brightness.max=255
     //% help="light/fade"
     //% group="Color" weight=18 blockGap=8
