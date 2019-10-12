@@ -1262,14 +1262,15 @@ namespace light {
          * Create a range of pixels.
          * @param start offset in the NeoPixel strip to start the range
          * @param length number of pixels in the range. eg: 4
-         */
+        
         //% blockId="Xneopixel_range" block="range from %start|with %length|pixels"
         //% deprecated=1
         //% defaultInstance=light.pixels
         __range(start: number, length: number): NeoPixelStrip {
             return this.range(start, length);
         }
-
+*/
+        
         /**
          * Shift LEDs forward and clear with zeros.
          * You need to call ``show`` to make the changes visible.
