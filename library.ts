@@ -158,7 +158,7 @@ namespace light {
 
     export class BrightnessTransitionPlayer {
         private transition: BrightnessTransition;
-        private : number;
+        private startBrightness: number;
         private endBrightness: number;
         private duration: number;
         private startTime: number;
@@ -168,6 +168,7 @@ namespace light {
         constructor(
             transition: BrightnessTransition,
             startBrightness: number,
+            
             endBrightness: number,
             duration: number,
             repeat: number,
