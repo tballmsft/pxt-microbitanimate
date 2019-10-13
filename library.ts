@@ -158,7 +158,7 @@ namespace light {
 
     export class BrightnessTransitionPlayer {
         private transition: BrightnessTransition;
-        private startBrightness: number;
+        private : number;
         private endBrightness: number;
         private duration: number;
         private startTime: number;
@@ -176,18 +176,18 @@ namespace light {
             this.startBrightness = startBrightness;
             this.endBrightness = endBrightness;
             this.duration = duration;
-            this.startTime = game.currentTime()
+            this.startTime = input.runningTime()
             this.repeat = repeat || 1;
             this.yoyo = yoyo ? 1 : 0;
         }
 
         update(strip: LightStrip): boolean {
-            let elapsed = game.currentTime() - this.startTime;
+            let elapsed = input.runningTime() - this.startTime;
             if (elapsed > this.duration) {
                 this.yoyo = -this.yoyo;
                 if (this.repeat > 0)
                     this.repeat--;
-                this.startTime = game.currentTime();
+                this.startTime = input.runningTime()
                 elapsed = 0;
                 return this.repeat != 0;
             }
@@ -423,7 +423,7 @@ namespace light {
             console.logValue("", value);
             value = Math.abs(value);
 
-            const now = game.currentTime()
+            const now = input.runningTime()
             if (high > 0) {
                 this._barGraphHigh = high;
             }
@@ -937,8 +937,8 @@ namespace light {
                 this._lastAnimation = animation;
                 this._lastAnimationRenderer = animationRenderer;
                 // execute animation
-                if (start < 0) start = game.currentTime()
-                const now = game.currentTime() - start;
+                if (start < 0) start = input.runningTime()
+                const now = input.runningTime() - start;
                 const buf = this.buffered();
                 this.setBuffered(true);
                 const keepRendering = animationRenderer();
