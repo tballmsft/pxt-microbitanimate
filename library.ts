@@ -318,7 +318,7 @@ namespace light {
         constructor(pin: DigitalPin, length: number, mode: NeoMode) {
             this._buffered = false;
             this._mode = NeoMode.RGB;
-            this._microbitStrip = neopixel.create(pin, length, NeoPixelMode.RGB)
+            this._microbitStrip = neopixel.create(pin, length, NeoPixelMode.RGB);
             this._length = length;
             this._brightness = 16;
             this._start = 0;
